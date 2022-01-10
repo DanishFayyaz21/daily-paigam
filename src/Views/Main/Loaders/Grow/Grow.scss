@@ -1,0 +1,23 @@
+.grow-animate {
+  animation-delay: 0;
+  animation-direction: normal;
+  animation-play-state: linear;
+  animation: grow .75s ease-in-out infinite;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0.75);
+    opacity: 0.75;
+  }
+  100% {
+    transform: none;
+    opacity: 0;
+  }
+}
