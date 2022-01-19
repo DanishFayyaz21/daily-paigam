@@ -1,29 +1,20 @@
+import Menu from '../Shared/Menu/Menu'
+
+import { GiRunningNinja } from 'react-icons/gi';
+import './Home.scss';
+
 const Home = () => {
   return (
-    <div className="templete bg-dark">
-      <div
-        className="d-flex justify-content-center"
-        style={{minHeight: '100vh'}}
-      >
-        <div className="align-self-center text-white">
-          <h1 className="fw-bold">
-            Templete Includes:
-          </h1>
-          <ul>
-            <li>Axios ^0.24.x</li>
-            <li>Bootstrap ^5.x.x</li>
-            <li>React Bootstrap ^2.x.x</li>
-            <li>React Icons ^4.x.x</li>
-            <li>React Router Dom ^6.x.x</li>
-            <li>React Toastify ^8.x.x</li>
-          </ul>
-          <p style={{fontSize: '.9rem'}}>
-            <span className="fw-bold">Additional Stuff:</span>{' '}
-            <br />This templete is also suitable for PWA Apps.
-          </p>
-          <cite style={{fontSize: '0.8rem'}}>- Templete By {' '}
-            <a href="https://sameerwasim.github.io">Sameer</a>
-          </cite>
+    <div id="home">
+      <div className="container">
+        <div className="d-flex justify-content-end">
+          <Menu />
+        </div>
+        <div className="ps-md-5 hero-box">
+          <h1>Let us track your <br /> website activity</h1>
+          <span>Make sure your website is always up and running <GiRunningNinja /></span>
+          <input className="form-control" placeholder="e.g. https://dailypaigam.com" />
+          <button className="btn btn-custom">Start Running</button>
         </div>
       </div>
     </div>

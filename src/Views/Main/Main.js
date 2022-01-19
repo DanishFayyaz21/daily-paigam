@@ -20,7 +20,7 @@ const Main = () => {
 
   return (
     <Router>
-      <Suspense fallback={<Grow />}>
+      <Suspense fallback={<Grow color="blue" />}>
         <Routes>
           {routes &&
             routes.map((route, index) => (

@@ -1,0 +1,67 @@
+$main-color: darkblue;
+$secondary-color: #f9faff;
+
+#home {
+  .container {
+    height: 100vh;
+    background-color: $main-color;
+    .menu {
+      list-style: none;
+      margin-top: 20px;
+      margin-right: 20px;
+      .menu-item {
+        display: inline-block;
+        width: 90px;
+        a {
+          font-size: 0.95rem;
+          font-weight: bold;
+          color: $secondary-color;
+          letter-spacing: 1.2px;
+          text-decoration: none;
+          padding: 12px 0px;
+          outline: none;
+          transition: 0.25s ease-in-out;
+          text-align: center;
+          border-bottom: 2px solid transparent;
+          &:hover {
+            color: $secondary-color;
+            border-bottom: 2px solid ;
+          }
+        }
+      }
+    }
+    .hero-box {
+      width: 40vw;
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      h1 {
+        color: #fff;
+        font-size: 2rem;
+        font-weight: bolder;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        line-height: 1.25;
+        margin-bottom: 0;
+      }
+      span {
+        color: $secondary-color;
+        font-size: 0.7rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      .form-control {
+        border: none;
+        outline: none;
+        box-shadow: none;
+        padding: 10px 20px;
+        border-radius: 0px;
+        margin-top: 9px;
+      }
+      .button-custom {
+
+      }
+    }
+  }
+}
