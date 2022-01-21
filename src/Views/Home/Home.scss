@@ -1,10 +1,7 @@
-$main-color: darkblue;
-$secondary-color: #f9faff;
-
 #home {
   .container {
     height: 100vh;
-    background-color: $main-color;
+    background-color: var(--dark-blue);
     .menu {
       list-style: none;
       margin-top: 20px;
@@ -15,7 +12,7 @@ $secondary-color: #f9faff;
         a {
           font-size: 0.95rem;
           font-weight: bold;
-          color: $secondary-color;
+          color: #fff;
           letter-spacing: 1.2px;
           text-decoration: none;
           padding: 12px 0px;
@@ -24,7 +21,7 @@ $secondary-color: #f9faff;
           text-align: center;
           border-bottom: 2px solid transparent;
           &:hover {
-            color: $secondary-color;
+            color: #fff;
             border-bottom: 2px solid ;
           }
         }
@@ -46,7 +43,7 @@ $secondary-color: #f9faff;
         margin-bottom: 0;
       }
       span {
-        color: $secondary-color;
+        color: #fff;
         font-size: 0.7rem;
         font-weight: bold;
         text-transform: uppercase;
@@ -59,8 +56,81 @@ $secondary-color: #f9faff;
         border-radius: 0px;
         margin-top: 9px;
       }
-      .button-custom {
+      .btn-custom {
+        border-radius: 0px;
+        margin-top: 12.5px;
+        padding: 10px 0px;
+        color: #fff;
+        font-weight: bold;
+        background-color: var(--orange);
+        transition: 5s ease-in-out;
+        width: 180px;
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
+        &:hover {
+          background-color: var(--yellow);
+        }
+      }
+    }
+  }
+}
 
+#home-modal {
+  .modal-body {
+    border-radius: 10px;
+    h3 {
+      color: var(--text);
+      letter-spacing: 2px;
+      word-spacing: 5px;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+      padding-bottom: 5px;
+    }
+    .border-bottom {
+      width: 200px;
+      margin: 0px;
+      border-radius: 100px;
+      border-bottom: 5px solid var(--dark-blue)!important;
+    }
+    .platforms {
+      padding: 50px 0px 0px;
+      .platform-box {
+        padding: 25px 0px;
+        img {
+          height: 68px;
+          width: auto;
+        }
+        p {
+          text-align: center;
+          margin-top: 8px;
+          font-weight: 700;
+          font-size: 15px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          color: var(--text);
+          margin-bottom: 0px;
+        }
+        &:nth-child(2) {
+          border-left: 1px solid var(--light-border);
+          border-right: 1px solid var(--light-border);
+        }
+      }
+    }
+    .dots {
+      margin-top: 40px;
+      .dot {
+        height: 10px;
+        width: 10px;
+        border-radius: 100%;
+        margin: 3px;
+        background-color: var(--light-border);
+      }
+      .dot.active {
+        background-color: var(--orange)!important;
       }
     }
   }
