@@ -42,7 +42,7 @@ const Home = () => {
             </Suspense>
 
             <div className="d-flex justify-content-center dots">
-              <span className="dot"></span>
+              <span className="dot active"></span>
               <span className="dot"></span>
               <span className="dot"></span>
             </div>
