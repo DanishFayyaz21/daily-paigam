@@ -1,4 +1,4 @@
-#home {
+#wac {
   .container {
     height: 100vh;
     background-color: var(--dark-blue);
@@ -6,6 +6,7 @@
       list-style: none;
       margin-top: 20px;
       margin-right: 20px;
+      button { margin-left: 20px; }
       .menu-item {
         display: inline-block;
         width: 90px;
@@ -56,28 +57,11 @@
         border-radius: 0px;
         margin-top: 9px;
       }
-      .btn-custom {
-        border-radius: 0px;
-        margin-top: 12.5px;
-        padding: 10px 0px;
-        color: #fff;
-        font-weight: bold;
-        background-color: var(--orange);
-        transition: 5s ease-in-out;
-        width: 180px;
-        &:focus {
-          outline: none;
-          box-shadow: none;
-        }
-        &:hover {
-          background-color: var(--yellow);
-        }
-      }
     }
   }
 }
 
-#home-modal {
+#wac-modal {
   .modal-body {
     border-radius: 10px;
     h3 {
@@ -131,6 +115,37 @@
       }
       .dot.active {
         background-color: var(--orange)!important;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 786px) {
+  #wac {
+    .hero-box {
+      width: 80vw!important;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  #wac {
+    .hero-box {
+      width: 94vw!important;
+    }
+  }
+
+  #wac-modal {
+    .modal-body {
+      .platforms {
+        .platform-box {
+          margin: 20px 0px;
+          padding: 5px 0px;
+          &:nth-child(2) {
+            border-right: none!important;
+          }
+        }
       }
     }
   }

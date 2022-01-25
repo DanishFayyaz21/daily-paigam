@@ -5,6 +5,7 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 import './index.css';
 import './themeing/variables.scss'
+import './themeing/custom.scss'
 
 ReactDOM.render(
   <App />,
