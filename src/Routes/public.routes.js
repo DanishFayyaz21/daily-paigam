@@ -1,43 +1,40 @@
-import { lazy } from 'react'
+import { lazy } from "react";
 
-const Auth = lazy(() => import('../Views/Auth/Auth'))
-const Template = lazy(() => import('../Views/Template/Template'))
+const Template = lazy(() => import("../Views/Template/Template"));
+// Auth
+const Auth = lazy(() => import("../Views/Auth/Auth"));
 // WAC Routes
-const WAC = lazy(() => import('../Views/WAC/WAC'))
-const WacSetup = lazy(() => import('../Views/WAC/Setup/Setup'))
+const WAC = lazy(() => import("../Views/WAC/WAC"));
 
 const publicRoutes = [
   {
-    path: '/',
+    path: "/",
     exact: true,
-    name: 'Home',
-    component: WAC
+    name: "Home",
+    component: WAC,
+    redirect: true,
+    redirectTo: "/wac",
   },
   {
-    path: '/auth/*',
-    exact: false,
-    name: 'Auth',
-    component: Auth
-  },
-  {
-    path: '/template',
+    path: "/template",
     exact: true,
-    name: 'Template',
-    component: Template
+    name: "Template",
+    component: Template,
+  },
+  // Auth Routes
+  {
+    path: "/auth",
+    exact: true,
+    name: "Auth",
+    component: Auth,
   },
   // WAC Routes
   {
-    path: '/wac',
+    path: "/wac",
     exact: true,
-    name: 'WAC',
-    component: WAC
+    name: "WAC",
+    component: WAC,
   },
-  {
-    path: '/wac/:website',
-    exact: true,
-    name: 'WAC Setup',
-    component: WacSetup
-  },
-]
+];
 
-export {publicRoutes}
+export { publicRoutes };

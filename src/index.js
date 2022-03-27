@@ -1,15 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App'
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
-import './index.css';
-import './themeing/variables.scss'
-import './themeing/custom.scss'
+// Soft UI Dashboard React Context Provider
+import { SoftUIControllerProvider } from "./Context/theme";
+
+import "./index.css";
+import "./themeing/variables.scss";
+import "./themeing/custom.scss";
 
 ReactDOM.render(
-  <App />,
-  document.getElementById('root')
+  <SoftUIControllerProvider>
+    <App />
+  </SoftUIControllerProvider>,
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change

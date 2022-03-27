@@ -1,0 +1,86 @@
+#auth {
+  .container {
+    height: 100vh;
+    #sign-in {
+      height: 100vh;
+      width: 100%;
+      background-color: var(--dark-blue);
+      color: var(--light-border);
+      text-align: center;
+      text-transform: uppercase;
+      h2 {
+        font-size: 50px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: var(--light-border);
+        span {
+          color: var(--orange);
+        }
+      }
+      h4 {
+        font-size: 12px;
+        word-spacing: 3px;
+        letter-spacing: 1.5px;
+        font-weight: bold;
+        color: #cfcfcf;
+      }
+    }
+    #sign-up {
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      text-transform: uppercase;
+      h2 {
+        font-size: 50px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: var(--dark);
+        span {
+          color: var(--orange);
+        }
+      }
+      h4 {
+        font-size: 12px;
+        word-spacing: 3px;
+        letter-spacing: 1.5px;
+        font-weight: bold;
+        color: #7f7f7f;
+      }
+    }
+
+    .form {
+      padding: 3rem 8rem 0rem 8rem;
+      .form-group {
+        margin-bottom: 20px;
+        .form-control {
+          border-radius: 20px;
+          border: none;
+          outline: none;
+          box-shadow: none;
+          padding: 10px 20px;
+          &::placeholder {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 13px;
+            letter-spacing: 2px;
+          }
+        }
+        button {
+          background-color: var(--orange);
+          border: 0px;
+          border-radius: 20px;
+          color: #fff;
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 14px;
+          padding: 10px 20px;
+          letter-spacing: 1px;
+          svg {
+            margin-top: -2.5px;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}

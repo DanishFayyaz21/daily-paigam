@@ -1,20 +1,28 @@
-import {lazy} from 'react'
-import {Routes, Route, useNavigate} from 'react-router-dom'
+import { Row, Col } from "react-bootstrap";
+import { Routes, Route, Navigate } from "react-router-dom";
 
-const SignIn = lazy(() => import('./SignIn/SignIn'))
-const SignUp = lazy(() => import('./SignUp/SignUp'))
+import SignIn from "./SignIn/SignIn";
+import SignUp from "./SignUp/SignUp";
+import Footer from "../../Components/Footer";
+
+import "./Auth.scss";
 
 const Auth = () => {
-
-  const navigate = useNavigate()
-
   return (
-    <Routes>
-      <Route path="sign-up" element={<SignUp />} />
-      <Route path="sign-in" element={<SignIn />} />
-      <Route path="*" element={() => navigate('sign-in')} />
-    </Routes>
-  )
-}
+    <div id="auth">
+      <div className="container">
+        <Row>
+          <Col sm={6}>
+            <SignIn />
+          </Col>
+          <Col sm={6}>
+            <SignUp />
+          </Col>
+        </Row>
+      </div>
+      <Footer />
+    </div>
+  );
+};
 
-export default Auth
+export default Auth;
