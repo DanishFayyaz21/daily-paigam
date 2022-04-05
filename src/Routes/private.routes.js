@@ -15,6 +15,8 @@ const privateRoutes = [
     component: Dashboard,
     noCollapse: true,
     showInSidenav: true,
+    showHeader: false,
+    showFooter: false,
   },
   {
     type: "collapse",
@@ -26,6 +28,8 @@ const privateRoutes = [
     component: Dashboard,
     noCollapse: true,
     showInSidenav: true,
+    showHeader: false,
+    showFooter: false,
   },
 ];
 

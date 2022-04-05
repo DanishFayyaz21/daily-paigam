@@ -1,0 +1,20 @@
+#header {
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px 3px 6px -3px #cfcfcf;
+  h3 {
+    font-size: 23px;
+    font-weight: 900;
+    margin-bottom: 0px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    span {
+      padding-left: 4px;
+      color: var(--orange);
+    }
+  }
+  svg {
+    color: #5f5f5f;
+    font-size: 26px;
+  }
+}

@@ -1,3 +1,4 @@
-import {commonService} from './common.service'
+import { commonService } from "./common.service";
+import { authService } from "./authentication.service";
 
-export {commonService}
+export { commonService, authService };

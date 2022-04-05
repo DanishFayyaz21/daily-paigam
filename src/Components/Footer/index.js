@@ -44,56 +44,6 @@ function Footer() {
                 Home
               </SuiTypography>
             </SuiBox>
-            <SuiBox mr={{ xs: 2, lg: 3, xl: 6 }}>
-              <SuiTypography
-                component="a"
-                href="#"
-                variant="body2"
-                color="secondary"
-              >
-                About Us
-              </SuiTypography>
-            </SuiBox>
-            <SuiBox mr={{ xs: 0, lg: 3, xl: 6 }}>
-              <SuiTypography
-                component="a"
-                href="#"
-                variant="body2"
-                color="secondary"
-              >
-                Team
-              </SuiTypography>
-            </SuiBox>
-            <SuiBox mr={{ xs: 2, lg: 3, xl: 6 }}>
-              <SuiTypography
-                component="a"
-                href="#"
-                variant="body2"
-                color="secondary"
-              >
-                Product
-              </SuiTypography>
-            </SuiBox>
-            <SuiBox mr={{ xs: 2, lg: 3, xl: 6 }}>
-              <SuiTypography
-                component="a"
-                href="#"
-                variant="body2"
-                color="secondary"
-              >
-                Blog
-              </SuiTypography>
-            </SuiBox>
-            <SuiBox>
-              <SuiTypography
-                component="a"
-                href="#"
-                variant="body2"
-                color="secondary"
-              >
-                Pricing
-              </SuiTypography>
-            </SuiBox>
           </SuiBox>
         </Grid>
         <Grid item xs={12} lg={8}>

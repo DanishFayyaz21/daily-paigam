@@ -37,7 +37,7 @@ function PageLayout({ background, children }) {
 
   return (
     <SuiBox
-      width="100vw"
+      width="auto"
       height="100%"
       minHeight="100vh"
       bgColor={background}

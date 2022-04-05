@@ -22,4 +22,26 @@ Auth.create = (data, callback) => {
   });
 };
 
+Auth.findById = (data, callback) => {
+  const sql = `SELECT name, email, username, status, updatedAt FROM users WHERE id = ?`;
+  conn.query(sql, data.id, (err, res) => {
+    if (err) {
+      callback(err, null);
+    } else {
+      callback(null, res[0]);
+    }
+  });
+};
+
+Auth.findByUsername = (data, callback) => {
+  const sql = `SELECT * FROM users WHERE username = ?`;
+  conn.query(sql, data.username, (err, res) => {
+    if (err) {
+      callback(err, null);
+    } else {
+      callback(null, res[0]);
+    }
+  });
+};
+
 module.exports = Auth;

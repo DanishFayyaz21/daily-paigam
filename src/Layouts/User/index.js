@@ -1,30 +1,35 @@
-import { useState } from "react";
-import Sidenav from "../../Components/Sidenav";
-import {
-  useSoftUIController,
-  setMiniSidenav,
-  setOpenConfigurator,
-} from "../../Context/theme";
+import PageLayout from "./PageLayout";
+import Sidebar from "./Sidebar";
+import Footer from "./Footer";
 
-import brand from "../../Assets/Images/logo-ct.png";
-import { privateRoutes } from "../../Routes";
+import SuiBox from "../../Components/SuiBox";
+import { useSoftUIController, setLayout } from "../../Context/theme";
 
-const UserLayout = () => {
+const UserLayout = ({ children }) => {
   const [controller, dispatch] = useSoftUIController();
-  const {
-    miniSidenav,
-    direction,
-    layout,
-    openConfigurator,
-    sidenavColor,
-  } = controller;
+  const { miniSidenav } = controller;
 
   return (
-    <Sidenav
-      color={sidenavColor}
-      brandName="Daily Paigam"
-      routes={privateRoutes}
-    />
+    <div>
+      <Sidebar />
+      <SuiBox
+        sx={({ breakpoints, transitions, functions: { pxToRem } }) => ({
+          p: 3,
+          position: "relative",
+
+          [breakpoints.up("xl")]: {
+            marginLeft: miniSidenav ? pxToRem(120) : pxToRem(274),
+            transition: transitions.create(["margin-left", "margin-right"], {
+              easing: transitions.easing.easeInOut,
+              duration: transitions.duration.standard,
+            }),
+          },
+        })}
+      >
+        <PageLayout>{children}</PageLayout>
+        <Footer />
+      </SuiBox>
+    </div>
   );
 };
 

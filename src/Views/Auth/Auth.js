@@ -3,7 +3,6 @@ import { Routes, Route, Navigate } from "react-router-dom";
 
 import SignIn from "./SignIn/SignIn";
 import SignUp from "./SignUp/SignUp";
-import Footer from "../../Components/Footer";
 
 import "./Auth.scss";
 
@@ -20,7 +19,6 @@ const Auth = () => {
           </Col>
         </Row>
       </div>
-      <Footer />
     </div>
   );
 };
