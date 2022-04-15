@@ -26,16 +26,28 @@ const AuthProvider = ({ children }) => {
     let result = await Axios.get(`${appConfig.api}auth/verify`, {
       headers: { "x-access-token": token },
     });
+    const { data } = result;
     setIsAuthenticated(!result.data.error);
-    if (result.data.error) {
+    if (data.error) {
       localStorage.setItem("user", "");
+    } else {
+      localStorage.setItem("user", JSON.stringify(data));
     }
     setLoading(false);
-    return !result.data.error;
+    return !data.error;
+  };
+
+  /* Function to sign out */
+  const signOut = () => {
+    setIsAuthenticated(false);
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    window.location.reload();
   };
 
   const authContextValue = {
     isAuthenticated,
+    signOut,
   };
   return (
     <AuthContext.Provider value={authContextValue}>

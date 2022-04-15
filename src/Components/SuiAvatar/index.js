@@ -22,7 +22,9 @@ import PropTypes from "prop-types";
 import SuiAvatarRoot from "./SuiAvatarRoot";
 
 const SuiAvatar = forwardRef(({ bgColor, size, shadow, ...rest }, ref) => (
-  <SuiAvatarRoot ref={ref} ownerState={{ shadow, bgColor, size }} {...rest} />
+  <SuiAvatarRoot ref={ref} ownerState={{ shadow, bgColor, size }} {...rest}>
+    {rest.name.slice(0, 1)}
+  </SuiAvatarRoot>
 ));
 
 // Setting default values for the props of SuiAvatar

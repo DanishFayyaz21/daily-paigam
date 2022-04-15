@@ -1,0 +1,80 @@
+#post {
+  padding-bottom: 20px;
+  .card {
+    border-radius: 1rem;
+    .card-body {
+      padding: 2rem 2.5rem;
+
+      form {
+        margin-top: 25px;
+        label {
+          font-size: 15px;
+        }
+        input,
+        select {
+          border: 2px solid #eee;
+          border-radius: 10px;
+          transition: 0.5s;
+          &:focus {
+            outline: none;
+            box-shadow: none;
+            border-color: red;
+          }
+        }
+        .image-box {
+          position: relative;
+          width: 200px;
+          .close-btn {
+            cursor: pointer;
+            position: absolute;
+            top: 0px;
+            right: 10px;
+            color: red;
+          }
+          img {
+            border: 2px solid #eee;
+            border-radius: 10px;
+            width: 200px;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+        .image-upload-box {
+          cursor: pointer;
+          border: 2px solid #eee;
+          border-radius: 10px;
+          width: 200px;
+          padding: 50px 10px;
+          text-align: center;
+          svg {
+            font-size: 50px;
+            color: #ccc;
+          }
+          div {
+            margin-top: 10px;
+            font-size: 13px;
+          }
+        }
+        .hidden-input {
+          display: none;
+          visibility: hidden;
+        }
+      }
+    }
+  }
+
+  .tip-card {
+    .card-title {
+      font-size: 18px;
+    }
+    ul {
+      margin-top: 30px;
+      padding-left: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      li {
+        padding: 5px 0px;
+      }
+    }
+  }
+}

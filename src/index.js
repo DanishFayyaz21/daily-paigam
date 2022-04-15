@@ -6,12 +6,12 @@ import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 // Soft UI Dashboard React Context Provider
 import { SoftUIControllerProvider } from "./Context/theme";
 
+import "bootstrap/dist/css/bootstrap.min.css";
+import "react-toastify/dist/ReactToastify.css";
+
 import "./index.css";
 import "./themeing/variables.scss";
 import "./themeing/custom.scss";
-
-import "react-toastify/dist/ReactToastify.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
   <SoftUIControllerProvider>

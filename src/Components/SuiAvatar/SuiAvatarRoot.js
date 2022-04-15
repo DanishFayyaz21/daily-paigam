@@ -60,7 +60,7 @@ export default styled(Avatar)(({ theme, ownerState }) => {
       sizeValue = {
         width: pxToRem(74),
         height: pxToRem(74),
-        fontSize: fontSize.md,
+        fontSize: pxToRem(45),
       };
       break;
     case "xxl":

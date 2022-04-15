@@ -48,6 +48,7 @@ exports.find = function (req, res) {
 };
 
 exports.verify = function (req, res) {
+  req.body.id = req.body.userId;
   const data = new Auth(req.body);
   Auth.findById(data, function (err, response) {
     if (err) res.send(err);

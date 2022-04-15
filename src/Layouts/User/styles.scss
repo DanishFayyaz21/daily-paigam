@@ -1,0 +1,13 @@
+#user-layout {
+  .header-less-navbar {
+    margin-bottom: 3.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #user-layout {
+    .header-less-navbar {
+      margin-bottom: 5.5rem !important;
+    }
+  }
+}

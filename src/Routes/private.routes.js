@@ -1,8 +1,9 @@
 import { lazy } from "react";
 
-import { GoHome, GoSettings } from "react-icons/go";
+import { GoHome, GoSettings, GoPlus } from "react-icons/go";
 
-const Dashboard = lazy(() => import("../Views/Dashboard"));
+const Dashboard = lazy(() => import("../Views/Dashboard/Profile"));
+const Post = lazy(() => import("../Views/Dashboard/Post"));
 
 const privateRoutes = [
   {
@@ -13,6 +14,19 @@ const privateRoutes = [
     path: "/dashboard",
     icon: <GoHome />,
     component: Dashboard,
+    noCollapse: true,
+    showInSidenav: true,
+    showHeader: false,
+    showFooter: false,
+  },
+  {
+    type: "collapse",
+    name: "Post",
+    key: "post",
+    route: "/post",
+    path: "/post",
+    icon: <GoPlus />,
+    component: Post,
     noCollapse: true,
     showInSidenav: true,
     showHeader: false,

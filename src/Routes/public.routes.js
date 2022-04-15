@@ -13,6 +13,8 @@ const publicRoutes = [
     component: Home,
     showHeader: true,
     showFooter: true,
+    // redirect: true,
+    // redirectTo: "/wac",
   },
   // Auth Routes
   {
@@ -23,6 +25,16 @@ const publicRoutes = [
     showHeader: false,
     showFooter: false,
   },
+
+  // WAC Routes
+  // {
+  //   path: "/wac",
+  //   exact: true,
+  //   name: "wac",
+  //   component: WAC,
+  //   showHeader: false,
+  //   showFooter: false,
+  // },
 ];
 
 export { publicRoutes };
