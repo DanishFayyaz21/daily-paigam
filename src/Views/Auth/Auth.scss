@@ -84,3 +84,11 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  #auth {
+    .form {
+      padding: 2rem !important;
+    }
+  }
+}

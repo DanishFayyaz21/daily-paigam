@@ -1,0 +1,29 @@
+#wac-user {
+  padding-bottom: 20px;
+  .wac-user-card {
+    position: relative;
+    .wac-card-time {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      font-size: 11px;
+    }
+    .wac-card-setting {
+      position: absolute;
+      top: 2px;
+      left: 10px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .wac-icon-text {
+      font-size: 35px;
+    }
+    .wac-user-link {
+      text-align: center;
+      a {
+        font-size: 16px;
+        color: var(--dark-blue);
+      }
+    }
+  }
+}

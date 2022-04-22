@@ -5,16 +5,20 @@ import { toast } from "react-toastify";
 import { commonService } from "../../../Services";
 import { authService } from "../../../Services";
 
+import { Auth } from "../../../Context/auth";
+
 import ForgetPassword from "../ForgetPassword/ForgetPassword";
 
 const SignIn = () => {
+  const { signIn } = Auth();
+
   const username = useRef();
   const password = useRef();
 
   const [usernameE, setUsernameE] = useState(false);
   const [passwordE, setPasswordE] = useState(false);
 
-  const submit = () => {
+  const submit = ({ redirect }) => {
     let error = false;
 
     if (commonService.validateUsername(username.current.value)) {
@@ -41,7 +45,8 @@ const SignIn = () => {
           toast.error(data.message);
         } else if (data.id) {
           localStorage.setItem("token", data.id);
-          window.location.href = "/dashboard";
+          if (redirect) window.location.href = "/dashboard";
+          else signIn();
         }
       });
     }
@@ -90,6 +95,10 @@ const SignIn = () => {
       </div>
     </div>
   );
+};
+
+SignIn.defaultProps = {
+  redirect: true,
 };
 
 export default SignIn;

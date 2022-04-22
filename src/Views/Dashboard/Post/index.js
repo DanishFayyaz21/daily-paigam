@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { Editor } from "@tinymce/tinymce-react";
 import SuiButton from "../../../Components/SuiButton";
 import { toast } from "react-toastify";
@@ -9,19 +10,21 @@ import { FaUpload } from "react-icons/fa";
 import { FcAbout } from "react-icons/fc";
 
 import { categories } from "../../../Data";
-import { postService } from "../../../Services";
+import { commonService, postService } from "../../../Services";
 
 import "./Post.scss";
 
 function Post() {
+  const navigate = useNavigate();
   const editorRef = useRef();
 
   const title = useRef();
   const category = useRef();
   const [image, setImage] = useState();
 
-  const submit = (event) => {
+  const submit = async (event) => {
     event.preventDefault();
+    toast("Adding Post");
 
     const content = editorRef.current.getContent();
     if (!image || !content) toast.warn("Please, complete the form!");
@@ -29,12 +32,25 @@ function Post() {
       const headers = { "x-access-token": localStorage.getItem("token") };
 
       const formData = new FormData();
-      formData.append("title", title.current.value);
-      formData.append("category", category.current.value);
-      formData.append("content", content);
-      formData.append("thumbnail", image);
+      formData.append("image", image);
+      const response = await commonService.uploadImage(
+        formData,
+        headers,
+        "single"
+      );
 
-      postService.create(formData, headers);
+      const data = {
+        thumbnail: response.data.filename,
+        title: title.current.value,
+        category: category.current.value,
+        content,
+      };
+      const result = await postService.create(data, headers);
+
+      if (result?.data?.insertId) {
+        navigate("/dashboard");
+        toast.success("Post Added Successfully");
+      }
     }
   };
 
@@ -91,7 +107,7 @@ function Post() {
                         id="title"
                         ref={title}
                         type="text"
-                        maxlength="120"
+                        maxLength="120"
                         placeholder="Title"
                         className="form-control"
                       />

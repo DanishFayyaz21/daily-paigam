@@ -6,11 +6,32 @@
   background-color: var(--orange);
   transition: 3s ease-in-out;
   width: 180px;
+  border-radius: 20px;
   &:focus {
     outline: none;
     box-shadow: none;
   }
   &:hover {
     background-color: var(--yellow);
+  }
+}
+
+.btn-custom-outline {
+  border-radius: 0px;
+  padding: 10px 0px;
+  color: #fff;
+  font-weight: bold;
+  border-width: 2px;
+  border-color: var(--orange);
+  transition: 3s ease-in-out;
+  width: 180px;
+  border-radius: 20px;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  &:hover {
+    color: #fff !important;
+    border-color: var(--yellow);
   }
 }

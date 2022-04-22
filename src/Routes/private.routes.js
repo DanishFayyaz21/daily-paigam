@@ -4,6 +4,7 @@ import { GoHome, GoSettings, GoPlus } from "react-icons/go";
 
 const Dashboard = lazy(() => import("../Views/Dashboard/Profile"));
 const Post = lazy(() => import("../Views/Dashboard/Post"));
+const WAC = lazy(() => import("../Views/Dashboard/WAC"));
 
 const privateRoutes = [
   {
@@ -34,17 +35,30 @@ const privateRoutes = [
   },
   {
     type: "collapse",
-    name: "Settings",
-    key: "settings",
-    route: "/settings",
-    path: "/settings",
-    icon: <GoSettings />,
-    component: Dashboard,
+    name: "WAC",
+    key: "wac",
+    route: "/wac",
+    path: "/wac",
+    icon: <GoPlus />,
+    component: WAC,
     noCollapse: true,
     showInSidenav: true,
     showHeader: false,
     showFooter: false,
   },
+  // {
+  //   type: "collapse",
+  //   name: "Settings",
+  //   key: "settings",
+  //   route: "/settings",
+  //   path: "/settings",
+  //   icon: <GoSettings />,
+  //   component: Dashboard,
+  //   noCollapse: true,
+  //   showInSidenav: true,
+  //   showHeader: false,
+  //   showFooter: false,
+  // },
 ];
 
 export { privateRoutes };

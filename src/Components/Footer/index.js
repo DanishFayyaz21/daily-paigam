@@ -44,6 +44,16 @@ function Footer() {
                 Home
               </SuiTypography>
             </SuiBox>
+            <SuiBox mr={{ xs: 2, lg: 3, xl: 6 }}>
+              <SuiTypography
+                component={Link}
+                to="/website-activity-checker"
+                variant="body2"
+                color="secondary"
+              >
+                WAC
+              </SuiTypography>
+            </SuiBox>
           </SuiBox>
         </Grid>
         <Grid item xs={12} lg={8}>

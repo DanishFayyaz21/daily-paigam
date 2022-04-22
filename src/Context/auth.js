@@ -45,8 +45,14 @@ const AuthProvider = ({ children }) => {
     window.location.reload();
   };
 
+  /* Function to sign in */
+  const signIn = () => {
+    setIsAuthenticated(true);
+  };
+
   const authContextValue = {
     isAuthenticated,
+    signIn,
     signOut,
   };
   return (

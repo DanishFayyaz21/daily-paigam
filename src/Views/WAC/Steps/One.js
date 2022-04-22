@@ -1,5 +1,4 @@
-const StepOne = ({ website, setPlatform, setStep }) => {
-
+const StepOne = ({ setPlatform, setStep }) => {
   const platforms = [
     { id: 1, image: "https://via.placeholder.com/2000", name: "Domain Based" },
     {

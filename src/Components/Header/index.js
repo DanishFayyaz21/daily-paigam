@@ -11,9 +11,11 @@ const Header = () => {
     <div id="header">
       <div className="container">
         <div className="d-flex justify-content-between">
-          <h3>
-            Daily<span>Paigam</span>
-          </h3>
+          <Link to="/">
+            <h3 className="text-dark mt-1">
+              Daily<span>Paigam</span>
+            </h3>
+          </Link>
           <Link to={isAuthenticated ? "/dashboard" : "/auth"}>
             <FaRegUserCircle />
           </Link>

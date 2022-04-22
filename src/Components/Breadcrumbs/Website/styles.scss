@@ -1,0 +1,16 @@
+#breadcrumbs {
+  font-size: 12px;
+  margin-top: 15px;
+  a {
+    color: #888 !important;
+    &:last-of-type {
+      &:after {
+        content: "" !important;
+      }
+    }
+    &:after {
+      content: "/";
+      padding: 0px 10px;
+    }
+  }
+}

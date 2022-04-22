@@ -6,11 +6,11 @@ import {
   Navigate,
 } from "react-router-dom";
 import { publicRoutes, privateRoutes } from "../../Routes";
-
 import { Auth } from "../../Context/auth";
 
-import "./Main.scss";
 import { Grow } from "./Loaders";
+import ScrollToTop from "../../Components/ScrollToTop";
+import "./Main.scss";
 
 const Header = React.lazy(() => import("../../Components/Header"));
 const Footer = React.lazy(() => import("../../Components/Footer"));
@@ -54,6 +54,7 @@ const Main = () => {
   return (
     <Router>
       <Suspense fallback={<Grow color="var(--orange)" />}>
+        <ScrollToTop />
         <Routes>
           {routes &&
             routes.map((route, index) =>

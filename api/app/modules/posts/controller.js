@@ -2,15 +2,14 @@ const Posts = require("./model");
 
 exports.find = function (req, res) {
   const data = new Posts(req.body);
-  Posts.find(data, function (err, response) {
+  const query = req.query;
+  Posts.find(data, query, function (err, response) {
     if (err) res.send(err);
     else res.json(response);
   });
 };
 
 exports.create = function (req, res) {
-  console.log(req.body);
-  req.body.thumbnail = req.file?.filename || "";
   const data = new Posts(req.body);
   if (req.body.constructor === Object && Object.keys(req.body).length === 0) {
     res

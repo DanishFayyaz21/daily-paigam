@@ -11,4 +11,16 @@ postService.create = async (data, headers) => {
     data,
   });
 };
+
+postService.find = async (data, query, headers) => {
+  return await Axios({
+    method: "get",
+    url: `${appConfig.api}posts?${query.id ? `&id=${query.id}` : ""}${
+      query.page ? `&page=${query.page}` : ""
+    }${query.limit ? `&limit=${query.limit}` : ""}`,
+    headers,
+    data,
+  });
+};
+
 export { postService };
